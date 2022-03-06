@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>numbers</title>
+        <style>
+            h1{
+                color:orange;
+                text-align:center;
+                
+            }
+            h2{
+                color:maroon;
+            }
+            p{
+                color:cadetblue;
+            }
+            body{
+                background-color: black;
+            }
+            .show{
+                padding-left:550px;
+                border-style:solid;
+                border-width:3px;
+                border-color:maroon;
+                background-color:lightblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Prime or Composite</h1>
+        <p>
+             Prime and composite numbers are the two types of numbers,
+             that differ based on the number of factors they have. 
+             A prime number is the one that has only two factors and 
+             a composite number has more than two factors. A factor 
+             is a value, that can divide a number or an expression evenly.
+             In this lesson, the properties of prime numbers and 
+             composite numbers are given along with their difference,
+             examples and tables. The chart of prime and composite numbers,
+             given in this article, will help to identify them easily.
+             <br><br>
+             <b style="color:burlywood;">What are Prime Numbers and Composite Numbers?</b><br>
+             A prime number is a number which has exactly two factors i.e.
+             1 and the number itself. A composite number has more than two 
+             factors, which means apart from getting divided by 1 and the 
+             number itself, it can also be divided by at least one positive 
+             integer. 1 is not a prime or composite number. Apart from these
+             two, there is also a similar category of numbers which are coprime 
+             numbers. A detailed explanation of these numbers is given below.<br><br>
+             <b style="color:burlywood">Prime Numbers</b><br>
+             A prime number is the one which has exactly two factors, which means,
+              it can be divided by only “1” and itself. But “1” is not a prime number.<br>
+
+             Example of Prime Number<br>
+
+             3 is a prime number because 3 can be divided by only two number’s i.e. 1 and 3 itself.
+            In the same way, 2, 5, 7, 11, 13, 17 are prime numbers.<br><br>
+
+             <b style="color:burlywood;">Composite Numbers</b><br>
+                A composite number has more than two factors, which means apart from getting 
+                divided by the number 1 and itself, it can also be divided by at least one 
+                integer or number. We don’t consider ‘1’ as a composite number.
+
+               <br> Example of Composite Number<br>
+
+                12 is a composite number because it can be divided by 1, 2, 3, 4, 6 and 12. 
+                So, the number ‘12’ has 6 factors.
+
+
+             <br>
+        </p>
+        <div class="show">
+        <h2>Enter the number :</h2>
+        <input type="text1"  id="number"><br><br>
+        <button onclick="show()">&nbsp;SHOW&nbsp;</button>
+        <br><br>
+        </div>
+
+        <script>
+            function show()
+            {
+                var a=Number(document.getElementById("number").value);
+                var c=0;
+                for(let x=2;x<a/2;x++)
+                {
+                    if(a%x==0)
+                    {
+                        c++;
+                        break;
+                    }
+                }
+                if(c==0)
+                {
+                    alert("It's a PRIME NUMBER.");
+                }
+                else
+                {
+                    alert("It's a COMPOSITE NUMBER.");
+                }
+            }
+        </script>
+    </body>
+</html>
